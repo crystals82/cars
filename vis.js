@@ -296,6 +296,43 @@ var scatter_tooltip = d3.select("body")
     .style("padding", "15px")
     .style("color", "white")
 
+// Annotations
+scene3.append('rect')
+    .attr("x", 300)
+    .attr("y", 200)
+    .attr("width", 425)
+    .attr("height", 30)
+    .style("fill", 'lightgray')
+    .style("alignment-baseline", "middle")
+
+scene3.append('text')
+    .attr("x", 310)
+    .attr("y", 220)
+    .attr("width", 60)
+    .attr("height", 20)
+    .style("fill", 'black')
+    .text("Circle size indicates number of cars in the category.")
+    .attr("text-anchor", "center")
+    .style("alignment-baseline", "center")
+
+scene3.append('rect')
+    .attr("x", 200)
+    .attr("y", 100)
+    .attr("width", 325)
+    .attr("height", 30)
+    .style("fill", 'lightgray')
+    .style("alignment-baseline", "middle")
+
+scene3.append('text')
+    .attr("x", 210)
+    .attr("y", 120)
+    .attr("width", 60)
+    .attr("height", 20)
+    .style("fill", 'black')
+    .text("Color depth indicates overlap of makes.")
+    .attr("text-anchor", "center")
+    .style("alignment-baseline", "center")
+
 async function load3() {
     d3.csv("https://flunky.github.io/cars2017.csv").then(function (data) {
 
